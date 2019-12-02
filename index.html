@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<title>Dźwięki</title>
+	<script type="text/javascript">
+		function play(x) {
+        var audio = document.getElementById(x);
+        audio.load();
+        audio.play();
+    }
+    function myloop(i, s){
+    			if(s.charAt(i) === '1') play('w');
+				if(s.charAt(i) === '2') play('sz1');
+				if(s.charAt(i) === '3') play('sz2');
+				if(s.charAt(i) === '4') play('sz3');
+				if(s.charAt(i) === '5') play('sz4');
+				if(s.charAt(i) === '6') play('sz5');
+				if(s.charAt(i) === '7') play('sz6');
+				if(s.charAt(i) === '8') play('sz7');
+				if(s.charAt(i) === '9') play('sz8');
+				if(s.charAt(i) === '0') play('sz9');
+				
+	
+    		}
+    	function read() {
+    		
+    		let s = document.getElementById('in').value.toString();
+    		
+    		
+    		for (var i = 0; i < s.length; i++) {
+    			var myVar = setTimeout(myloop(i, s), 5000);
+    		}
+    		
+			}	
+
+
+    	
+	
+	document.addEventListener('keydown', (e) => {
+		
+		if(e.key === '1') play('w');
+		if(e.key === '2') play('sz1');
+		if(e.key === '3') play('sz2');
+		if(e.key === '4') play('sz3');
+		if(e.key === '5') play('sz4');
+		if(e.key === '6') play('sz5');
+		if(e.key === '7') play('sz6');
+		if(e.key === '8') play('sz7');
+		if(e.key === '9') play('sz8');
+		if(e.key === '0') play('sz9');
+		
+	})
+
+
+
+
+    	
+	</script>
+	<style type="text/css">
+		button {
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+
+</head>
+<body>
+<div class="container-fluid">
+	
+	<button onclick="play('w');">Dźwięk1</button>
+	<button onclick="play('sz1');">Dźwięk2</button>
+	<button onclick="play('sz2');">Dźwięk3</button>
+	<button onclick="play('sz3');">Dźwięk4</button>
+	<button onclick="play('sz4');">Dźwięk5</button>
+	<button onclick="play('sz5');">Dźwięk6</button>
+	<button onclick="play('sz6');">Dźwięk7</button>
+	<button onclick="play('sz7');">Dźwięk8</button>
+	<button onclick="play('sz8');">Dźwięk9</button>
+	<button onclick="play('sz9');">Dźwięk10</button>
+	<button onclick="play('sz10');">Dźwięk11</button>
+</div>
+<audio style="visibility: hidden;" id="w" src="dzwiekiUkuleleOrg/0.m4a" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="sz1" src="dzwiekiUkuleleOrg/1.m4a" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="sz2" src="dzwiekiUkuleleOrg/2.m4a" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="sz3" src="dzwiekiUkuleleOrg/3.m4a" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="sz4" src="dzwiekiUkuleleOrg/4.m4a" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="sz5" src="dzwiekiUkuleleOrg/5.m4a" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="sz6" src="dzwiekiUkuleleOrg/6.m4a" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="sz7" src="dzwiekiUkuleleOrg/7.m4a" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="sz8" src="dzwiekiUkuleleOrg/8.m4a" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="sz9" src="dzwiekiUkuleleOrg/9.m4a" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="sz10" src="dzwiekiUkuleleOrg/szczek.mp3" volume="0.1"></audio>
+
+<input type="number" id="in">
+<button onclick="read();">Zagraj</button>
+<p id="c"></p>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
