@@ -7,12 +7,16 @@
 
 	<title>Dźwięki</title>
 	<script type="text/javascript">
+	function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 		function play(x) {
         var audio = document.getElementById(x);
         audio.load();
         audio.play();
     }
-    function myloop(i, s){
+    function zagraj(i, s){
+			if(s.charAt(i) === '[') 
     			if(s.charAt(i) === '1') play('w');
 				if(s.charAt(i) === '2') play('sz1');
 				if(s.charAt(i) === '3') play('sz2');
@@ -26,16 +30,26 @@
 				
 	
     		}
-    	function read() {
+    	function read() 
+		{
     		
-    		let s = document.getElementById('in').value.toString();
+				let s = document.getElementById('in').value.toString();
+				
+				var i = 0;                     //  set your counter to 1
+
+				function myLoop () {           //  create a loop function
+				   setTimeout(function () {    //  call a 3s setTimeout when the loop is called
+					  zagraj(i,s);          //  your code here
+					  i++;                     //  increment the counter
+					  if (i < s.length) {            //  if the counter < 10, call the loop function
+						 myLoop();             //  ..  again which will trigger another 
+					  }                        //  ..  setTimeout()
+				   }, 200)
+				}
+
+				myLoop(); 
     		
-    		
-    		for (var i = 0; i < s.length; i++) {
-    			var myVar = setTimeout(myloop(i, s), 5000);
-    		}
-    		
-			}	
+		}	
 
 
     	
