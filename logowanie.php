@@ -1,9 +1,3 @@
-<?php
-session_start();
-if(empty($_SESSION["zalogowany"]))$_SESSION["zalogowany"]=0;
-
-include "config.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -81,77 +75,32 @@ include "config.php";
                        
   <!-- Main Content -->
   <div class="container">
-      <div class="col-lg-4 col-md-10 mx-auto">
-          <div class="login-page">
-  
-              
-              
-              
-    <div class="form">
-    <form class="register-form" action ="rejestruj.php" method="post">
-      <input type="text" name="imie_rej" placeholder="Imię" required/>   
-      <input type="text" name="email_rej" placeholder="Adres e-mail" required/>
-      <input type="password" name="haslo_rej" placeholder="Hasło" required/>
-      <input type="password" name="haslo_rej2" placeholder="Powtórz hasło" required/>
-      <button type="submit" value="post" name="zarejestruj">Zarejestruj</button>
-      <p class="message">Już zarejetrowany? <a href="#">Zaloguj się!</a></p>
-    </form>
-        
-        
-      
-      
-      
-
-      
-      
-      
-      
-      
-    <form class="login-form" action="logowanie.php" method="post">
-      <input type="text" name="login" id="login_log" placeholder="Nazwa użytkowanika" required/>
-      <input type="password" name="haslo" id="haslo_log" placeholder="Hasło" required/>
-      <button type="submit" value="post" name="zaloguj">Zaloguj</button>
-      <p class="message">Jescze nie stworzyłeś konta? <a href="#">Zarejestruj się!</a></p>
-    </form>
-  </div>
-</div>
-          <?php
-//if($_GET["wyloguj"]=="tak"){$_SESSION["zalogowany"]=0;echo "Zostałeś wylogowany z serwisu";}
-//if($_SESSION["zalogowany"]!=1){
-	if(!empty($_POST["login"]) && !empty($_POST["haslo"])){
-        //zdefiniowanie kodu sql
-        $sql = "SELECT id, admin FROM uzytkownicy WHERE email = '".htmlspecialchars($_POST["login"])."' AND haslo = '".htmlspecialchars($_POST["haslo"])."'";
-        //przypisanie rezultatu wykonania kodu sql
-        $result = $conn->query($sql);
-        
-		if($result->num_rows > 0){
-      while($row = $result->fetch_assoc()) {
-        if($row["admin"] == 1) {
-          echo "Witaj adminie! <meta http-equiv='Refresh' content='2;url=index_ADMIN.html'>";
-        break;}
-      else { echo "Gratulacje! Zalogowałeś się pomyślnie! <meta http-equiv='Refresh' content='2;url=index.html'>";}
-      }
-			$_SESSION["zalogowany"]=1;
-            //$row = $result->fetch_assoc();
-            //$_SESSION["id"] .= $row['id'];
-            while($row = $result->fetch_assoc()) {
-            $_SESSION["id"]= $row["id"];
-            }
-			}
-		else echo "Wprowadzono złe dane spróbój ponownie";
-		}
-	//else {};
-//}
-//else{};
-
-
-            ?>
+    <div class="col-lg-4 col-md-10 mx-auto">
+      <div class="login-page">
+    
+                
+                
+    <!-- Register form -->            
+      <div class="form">
+        <form class="register-form" action ="rejestruj.php" method="post">
+          <input type="text" name="imie_rej" placeholder="Imię" required/>   
+          <input type="text" name="email_rej" placeholder="Adres e-mail" required/>
+          <input type="password" name="haslo_rej" placeholder="Hasło" required/>
+          <input type="password" name="haslo_rej2" placeholder="Powtórz hasło" required/>
+          <button type="submit" value="post" name="zarejestruj">Zarejestruj</button>
+          <p class="message">Już zarejetrowany? <a href="#">Zaloguj się!</a></p>
+        </form>
           
-          
-          
-                    
-        
-        </div>
+   <!-- Login form -->
+            <form class="login-form" action="loguj.php" method="post">
+              <input type="text" name="login" id="login_log" placeholder="Nazwa użytkowanika" required/>
+              <input type="password" name="haslo" id="haslo_log" placeholder="Hasło" required/>
+              <button type="submit" value="post" name="zaloguj">Zaloguj</button>
+              <p class="message">Jescze nie stworzyłeś konta? <a href="#">Zarejestruj się!</a></p>
+            </form>
+          </div>
+        </div>      
+      </div>
     </div>
   </div>
     
