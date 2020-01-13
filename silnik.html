@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<title>Dźwięki</title>
+	<script type="text/javascript">
+	
+		function play(x) {
+		if(x != ' '){
+        var audio = document.getElementById(x);
+        audio.load();
+        audio.play();
+		}
+    }		
+			function sleep(ms) {
+			  return new Promise(resolve => setTimeout(resolve, ms));
+			}
+
+    	async function read() {
+    		let s = document.getElementById('in').value.toString();
+			for(var i = 0; i < s.length; i++){
+			play(s.charAt(i));
+			await sleep(document.getElementById('zakres').value);
+			}
+			}
+	
+	document.addEventListener('keydown', (e) => {
+		if(document.getElementById('czyGra').checked){
+		play(e.key);
+		}
+		
+	})
+
+
+
+
+    	
+	</script>
+	<style type="text/css">
+		button {
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+
+</head>
+<body>
+<div class="container-fluid">
+	
+	<button onclick="play('q');">Dźwięk1</button>
+	<button onclick="play('w');">Dźwięk2</button>
+	<button onclick="play('e');">Dźwięk3</button>
+	<button onclick="play('r');">Dźwięk4</button>
+	<button onclick="play('t');">Dźwięk5</button>
+	<button onclick="play('y');">Dźwięk6</button>
+	<button onclick="play('u');">Dźwięk7</button>
+	<button onclick="play('i');">Dźwięk8</button>
+	<button onclick="play('o');">Dźwięk9</button>
+	<button onclick="play('p');">Dźwięk10</button>
+	<button onclick="play('a');">Dźwięk11</button>
+</div>
+<audio style="visibility: hidden;" id="q" src="dzwiekiUkuleleOrg/0.m4a" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="w" src="dzwiekiUkuleleOrg/1.m4a" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="e" src="dzwiekiUkuleleOrg/2.m4a" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="r" src="dzwiekiUkuleleOrg/3.m4a" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="t" src="dzwiekiUkuleleOrg/4.m4a" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="y" src="dzwiekiUkuleleOrg/5.m4a" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="u" src="dzwiekiUkuleleOrg/6.m4a" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="i" src="dzwiekiUkuleleOrg/7.m4a" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="o" src="dzwiekiUkuleleOrg/8.m4a" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="p" src="dzwiekiUkuleleOrg/9.m4a" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="a" src="dzwiekiUkuleleOrg/szczek.mp3" volume="0.1"></audio>
+
+<input  id="in">
+<button onclick="read();">Zagraj</button>
+<input type="checkbox" id="czyGra" checked>
+<div class="slidecontainer">
+  <input type="range" min="200" max="2000" id="zakres" style="width: 400px;">
+  <p>WARTOŚĆ: <div id="demo"></div></p>
+   
+</div>
+ 
+<script>
+ 
+ 
+var suwak = document.getElementById("zakres"); 
+var output = document.getElementById("demo");
+ 
+output.innerHTML = suwak.value;               
+ 
+suwak.oninput = function()                  
+{
+  output.innerHTML = this.value;
+}
+ 
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
