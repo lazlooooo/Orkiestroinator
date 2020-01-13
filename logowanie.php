@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(empty($_SESSION["zalogowany"]))$_SESSION["zalogowany"]=0;
+
+include "config.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +33,7 @@
 
 </head>
 
-<body onload="zegarek()">
+<body>
   <!-- Navigation -->
  <nav class="navbar navbar-expand-lg navbar-light fixed-top " id="mainNav">
     <div class="container"> 
@@ -82,61 +88,16 @@
               
               
     <div class="form">
-    <form method="POST" class="register-form">
-      <input type="text" name="imie_rej" placeholder="Imię" required/>
-      <input type="text" name="nazwisko_rej" placeholder="Nazwisko" required/>
-      <input type="text" name="login_rej" placeholder="Login" required/>    
-      <input type="password" name="haslo_rej" placeholder="Hasło" required/>
+    <form class="register-form" action ="rejestruj.php" method="post">
+      <input type="text" name="imie_rej" placeholder="Imię" required/>   
       <input type="text" name="email_rej" placeholder="Adres e-mail" required/>
+      <input type="password" name="haslo_rej" placeholder="Hasło" required/>
+      <input type="password" name="haslo_rej2" placeholder="Powtórz hasło" required/>
       <button type="submit" value="post" name="zarejestruj">Zarejestruj</button>
       <p class="message">Już zarejetrowany? <a href="#">Zaloguj się!</a></p>
     </form>
         
-        <?php
-    
-            //connect
-    
-            $polaczenie = new mysqli('localhost','root','','orkiestroinator' );
-
-            //check connect
-
-            if(mysqli_connect_errno() !=0)
-            { echo 'Wystąpił błąd podczas łączenia z bazą danych: '.mysqli_connect_error();
-    
-            exit;
-            } 
-
-
-            //adding
-
-            if(isset($_POST['zarejestruj']))
-            {
-
-            include 'BAZA_DANYCH\config.php';
-
-            $Imie = $_POST['imie_rej'];
-            $Nazwisko = $_POST['nazwisko_rej'];
-            $Login = $_POST['login_rej'];
-            $Haslo = $_POST['haslo_rej'];
-            $Email = $_POST['email_rej'];
-
-            $sql="insert into uzytkownicy (imie, nazwisko, login, haslo, email) values ('$Imie','$Nazwisko','$Login','$Haslo','$Email')";
-
-            if($wynik = $polaczenie->query($sql) === TRUE)
-                { 
-                    echo "Zarejestrowano nowego użytkownika!!"; 
-                    $polaczenie->close(); 
-                    header("location: logowanie.php"); 
-                }
-                else 
-                    {   
-                        echo "Error: ".$sql."<br />".$polaczenie->error;
-                    }
-                        $polaczenie->close();
-            }
-
-
-            ?>
+        
       
       
       
@@ -146,56 +107,37 @@
       
       
       
-    <form class="login-form" action="instrumenty.html" method="post">
-      <input type="text" id="login_log" placeholder="Nazwa użytkowanika" required/>
-      <input type="password" id="haslo_log" placeholder="Hasło" required/>
+    <form class="login-form" action="logowanie.php" method="post">
+      <input type="text" name="login" id="login_log" placeholder="Nazwa użytkowanika" required/>
+      <input type="password" name="haslo" id="haslo_log" placeholder="Hasło" required/>
       <button type="submit" value="post" name="zaloguj">Zaloguj</button>
       <p class="message">Jescze nie stworzyłeś konta? <a href="#">Zarejestruj się!</a></p>
     </form>
   </div>
 </div>
-          
           <?php
-    
-            //connect
-    
-            $polaczenie = new mysqli('localhost','root','','orkiestroinator' );
-
-            //check connect
-
-            if(mysqli_connect_errno() !=0)
-            { echo 'Wystąpił błąd podczas łączenia z bazą danych: '.mysqli_connect_error();
-    
-            exit;
-            } 
-
-
-            //adding
-
-            if(isset($_POST['zaloguj']))
-            {
-
-            include 'BAZA_DANYCH\config.php';
-
-            
-            $Login=$_POST['login_log'];
-            $Haslo=$_POST['haslo_log'];
-            
-
-            $sql="Select count(*) from uzytkownicy where login='".$Login."' and haslo='".$Haslo;
-
-            if($wynik = $polaczenie->query($sql) == 1)
-                { 
-                    echo "Pomyślnie zalogowano!"; 
-                    $polaczenie->close(); 
-                    header("location: instrumenty.php"); 
-                }
-                else 
-                    {   
-                        echo "Error: ".$sql."<br />".$polaczenie->error;
-                    }
-                        $polaczenie->close();
+//if($_GET["wyloguj"]=="tak"){$_SESSION["zalogowany"]=0;echo "Zostałeś wylogowany z serwisu";}
+//if($_SESSION["zalogowany"]!=1){
+	if(!empty($_POST["login"]) && !empty($_POST["haslo"])){
+        //zdefiniowanie kodu sql
+        $sql = "SELECT id FROM uzytkownicy WHERE email = '".htmlspecialchars($_POST["login"])."' AND haslo = '".htmlspecialchars($_POST["haslo"])."'";
+        //przypisanie rezultatu wykonania kodu sql
+        $result = $conn->query($sql);
+        
+		if($result->num_rows > 0){
+			echo "Gratulacje! Zalogowałeś się pomyślnie! <meta http-equiv='Refresh' content='2;url=index.html'>";
+			$_SESSION["zalogowany"]=1;
+            //$row = $result->fetch_assoc();
+            //$_SESSION["id"] .= $row['id'];
+            while($row = $result->fetch_assoc()) {
+            $_SESSION["id"]= $row["id"];
             }
+			}
+		else echo "Wprowadzono złe dane spróbój ponownie";
+		}
+	//else {};
+//}
+//else{};
 
 
             ?>
