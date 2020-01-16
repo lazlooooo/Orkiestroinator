@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 if(empty($_SESSION["zalogowany"]))$_SESSION["zalogowany"]=0;
 
 include "config.php";
@@ -14,19 +15,18 @@ include "config.php";
         
 		if($result->num_rows > 0){
       while($row = $result->fetch_assoc()) {
+        $_SESSION["id"]= $row["id"];
         if($row["admin"] == 1) {
-          echo "Witaj adminie! <meta http-equiv='Refresh' content='2;url=index_ADMIN.html'>";
-        break;}
-      else { echo "Gratulacje! Zalogowałeś się pomyślnie! <meta http-equiv='Refresh' content='2;url=index.html'>";}
+          $_SESSION["zalogowany"]=2;
+          echo "<meta http-equiv='Refresh' content='0;url=index_ADMIN.html'>";
+        break;
       }
-			$_SESSION["zalogowany"]=1;
-            //$row = $result->fetch_assoc();
-            //$_SESSION["id"] .= $row['id'];
-            while($row = $result->fetch_assoc()) {
-            $_SESSION["id"]= $row["id"];
-            }
-			}
-		else echo "Wprowadzono złe dane spróbój ponownie <meta http-equiv='Refresh' content='2;url=logowanie.php'>";
+      else { 
+        echo "<meta http-equiv='Refresh' content='0;url=index.html'>";
+        $_SESSION["zalogowany"]=1;}
+      }
+    }
+		else echo "Wprowadzono złe dane spróbój ponownie <meta http-equiv='Refresh' content='0;url=logowanie.php'>";
 		}
 	//else {};
 //}

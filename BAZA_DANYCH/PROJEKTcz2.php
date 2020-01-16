@@ -1,5 +1,8 @@
 <?php
-
+session_start();
+print_r($_SESSION);
+if($_SESSION["zalogowany"]!=2)echo "Witryna dostępna tylko z poziomu admina!";
+else{
 
 include 'config.php';
 
@@ -11,8 +14,6 @@ echo '
         <tr style="background:#17a2b8;">
             <td style="width:10%">ID</td>
             <td style="width:20%">IMIĘ</td>
-            <td style="width:20%">NAZWISKO</td>
-            <td style="width:20%">LOGIN</td>
             <td style="width:20%">HASŁO</td>
             <td style="width:20%">EMAIL</td>
             <td style="width:20%">ADMIN</td>
@@ -39,8 +40,6 @@ $wynik=$polaczenie -> query($sql);
             echo '<tr>';
             echo '<td>'.$rekord['id'].'</td>';
             echo '<td>'.$rekord['imie'].'</td>';
-            echo '<td>'.$rekord['nazwisko'].'</td>';
-            echo '<td>'.$rekord['login'].'</td>';
             echo '<td>'.$rekord['haslo'].'</td>';
             echo '<td>'.$rekord['email'].'</td>';
             echo '<td>'.$rekord['admin'].'</td>';
@@ -51,6 +50,7 @@ $wynik=$polaczenie -> query($sql);
                 
             
     }
+}
 ?>
 <!doctype html>
 <html>
