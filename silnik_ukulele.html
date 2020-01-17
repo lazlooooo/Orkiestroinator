@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<title>Dźwięki</title>
+	<script type="text/javascript">
+		var pause = false;
+		function play(x) {
+		if(x != ' '){
+        var audio = document.getElementById(x);
+        audio.load();
+        audio.play();
+		}
+    }		
+			function sleep(ms) {
+			  return new Promise(resolve => setTimeout(resolve, ms));
+			}
+
+    	async function read() {
+			pause=false;
+    		let s = document.getElementById('in').value.toString();
+			let select = document.getElementById('in');
+			for(var i = 0; i < s.length; i++){
+			if(pause == false)
+			{
+			play(s.charAt(i));
+			select.focus();
+			select.setSelectionRange(i,i+1);
+
+			await sleep(document.getElementById('zakres').value);
+			}
+			}
+			}
+	
+	document.addEventListener('keydown', (e) => {
+		if(document.getElementById('czyGra').checked){
+		play(e.key);
+
+		
+		}
+		
+	})
+	function stop(){
+		pause=true;
+		audio.pause();
+	}
+
+
+
+
+    	
+	</script>
+	<style type="text/css">
+		button {
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+
+</head>
+<body>
+<div class="container-fluid">
+	
+	<button onclick="play('q');">Dźwięk C</button>
+	<button onclick="play('w');">Dźwięk D</button>
+	<button onclick="play('e');">Dźwięk E</button>
+	<button onclick="play('r');">Dźwięk F</button>
+	<button onclick="play('t');">Dźwięk G</button>
+	<button onclick="play('y');">Dźwięk A</button>
+	<button onclick="play('u');">Dźwięk B</button><br>
+
+	<button onclick="play('a');">Dźwięk Cm</button>
+	<button onclick="play('s');">Dźwięk Dm</button>
+	<button onclick="play('d');">Dźwięk Em</button>
+	<button onclick="play('f');">Dźwięk Fm</button>
+	<button onclick="play('g');">Dźwięk Gm</button>
+	<button onclick="play('h');">Dźwięk Am</button>
+	<button onclick="play('j');">Dźwięk Bm</button><br>
+
+	<button onclick="play('z');">Dźwięk C7</button>
+	<button onclick="play('x');">Dźwięk D7</button>
+	<button onclick="play('c');">Dźwięk E7</button>
+	<button onclick="play('v');">Dźwięk F7</button>
+	<button onclick="play('b');">Dźwięk G7</button>
+	<button onclick="play('n');">Dźwięk A7</button>
+	<button onclick="play('m');">Dźwięk B7</button><br>
+
+</div>
+<audio style="visibility: hidden;" id="q" src="ukulele/ukuleleC.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="a" src="ukulele/ukuleleCm.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="z" src="ukulele/ukuleleC7.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="w" src="ukulele/ukuleleD.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="s" src="ukulele/ukuleleDm.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="x" src="ukulele/ukuleleD7.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="e" src="ukulele/ukuleleE.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="d" src="ukulele/ukuleleEm.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="c" src="ukulele/ukuleleE7.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="r" src="ukulele/ukuleleF.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="f" src="ukulele/ukuleleFm.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="v" src="ukulele/ukuleleF7.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="t" src="ukulele/ukuleleG.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="g" src="ukulele/ukuleleGm.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="b" src="ukulele/ukuleleG7.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="y" src="ukulele/ukuleleA.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="h" src="ukulele/ukuleleAm.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="n" src="ukulele/ukuleleA7.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="u" src="ukulele/ukuleleB.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="j" src="ukulele/ukuleleBm.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="m" src="ukulele/ukuleleB7.mp3" volume="0.1"></audio>
+
+<input type="text"  id="in">
+<button onclick="read();">Zagraj</button>
+<button onclick="stop();">Stop</button>
+<input type="checkbox" id="czyGra" checked>
+<div class="slidecontainer">
+  <input type="range" min="200" max="2000" id="zakres" style="width: 400px;">
+  <p>WARTOŚĆ: <div id="demo"></div></p>
+   
+</div>
+ 
+<script>
+ 
+ 
+var suwak = document.getElementById("zakres"); 
+var output = document.getElementById("demo");
+ 
+output.innerHTML = suwak.value;               
+ 
+suwak.oninput = function()                  
+{
+  output.innerHTML = this.value;
+}
+ 
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
