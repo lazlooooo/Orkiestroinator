@@ -7,7 +7,7 @@
 
 	<title>Dźwięki</title>
 	<script type="text/javascript">
-		var pause = false;
+	
 		function play(x) {
 		if(x != ' '){
         var audio = document.getElementById(x);
@@ -20,33 +20,19 @@
 			}
 
     	async function read() {
-			pause=false;
     		let s = document.getElementById('in').value.toString();
-			let select = document.getElementById('in');
 			for(var i = 0; i < s.length; i++){
-			if(pause == false)
-			{
 			play(s.charAt(i));
-			select.focus();
-			select.setSelectionRange(i,i+1);
-
 			await sleep(document.getElementById('zakres').value);
-			}
 			}
 			}
 	
 	document.addEventListener('keydown', (e) => {
 		if(document.getElementById('czyGra').checked){
 		play(e.key);
-
-		
 		}
 		
 	})
-	function stop(){
-		pause=true;
-		audio.pause();
-	}
 
 
 
@@ -88,9 +74,8 @@
 <audio style="visibility: hidden;" id="p" src="dzwiekiUkuleleOrg/9.m4a" volume="0.1"></audio>
 <audio style="visibility: hidden;" id="a" src="dzwiekiUkuleleOrg/szczek.mp3" volume="0.1"></audio>
 
-<input type="text"  id="in">
+<input  id="in">
 <button onclick="read();">Zagraj</button>
-<button onclick="stop();">Stop</button>
 <input type="checkbox" id="czyGra" checked>
 <div class="slidecontainer">
   <input type="range" min="200" max="2000" id="zakres" style="width: 400px;">

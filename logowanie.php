@@ -39,13 +39,13 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Strona Główna</a>
+            <a class="nav-link" href="index.php">Strona Główna</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="logowanie.php">Logowanie</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="instrumenty.html">Instrumenty</a>
+            <a class="nav-link" href="instrumenty.php">Instrumenty</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="kontakt.html">Kontakt</a>
@@ -102,7 +102,9 @@
         </div>      
       </div>
     </div>
-  </div>
+  
+    
+    
     
 
   <hr>

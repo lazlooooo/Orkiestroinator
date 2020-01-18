@@ -11,11 +11,12 @@
   <title>Projekt zaliczeniowy</title>
 
   <!-- Bootstrap CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">  
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/efekty.css" rel="stylesheet">
-  
-  
+  <link href="css/lakeland.min.css" rel="stylesheet">    
+
+
 
   <!-- Fonts -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -23,12 +24,14 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
   <!-- Styles template -->
-  <link href="css/oriestroinator.min.css" rel="stylesheet">
   
+  <link href="css/oriestroinator.min.css" rel="stylesheet">
+      
+
 
 </head>
 
-
+<body onload="zegarek()">
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top " id="mainNav">
     <div class="container"> 
@@ -62,43 +65,30 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/kontakt.jpg')">
+  <header class="masthead" style="background-image: url('img/music1.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>KONTAKT</h1>
-            <span class="subheading">JEŚLI MASZ JAKIEKOLWIEK PYTANIE SKONTAKTUJ SIE Z NAMI!</span>
-              
+            <h1>ORKIESTROINATOR</h1>
+            <span class="subheading">APLIKACJA GRAJĄCA</span>
+              <h2><div class="navbar-brand zmniejszenie" id="zegar"></div></h2>
           </div>
         </div>
       </div>
     </div>
-      
   </header>
 
-  <!-- Post Content -->
-  <article>
-    <div class="container">
-    <div class="row">    
-        <div class="col-lg-3 col-md-10 mx-auto">
-           <h1 class="section-heading">Email</h1>      
-            <ul>
-                <li><a href="#">orkiestroinator@gmail.com</a></li>
-            </ul>
-        </div> 
-            <div class="col-lg-3 col-md-10 mx-auto">
-            <h1 class="section-heading">Telefon</h1> 
-                <ul>
-                <li><a href="#">+48 123456789</a></li>
-                </ul>
-        </div>
-      </div>
-  </article>
-<br>
-  <hr>
-
+  <!-- Main Content -->
+    <hr>
+ <div class="container">
+    <div class="row">
+      <div class="col-lg-7 col-md-10 mx-auto">
+          <img src="img/info.png" alt="zdj"  >
+                                <div class="card-body">
+                                </div>
+          <hr>
   <!-- Footer -->
   <footer>
     <div class="container">
@@ -135,17 +125,23 @@
             <p class="copyright text-muted">&copy;Orkiestroinator2019</p>   
                        
         </div>
+        </div>
+        </div>
+      
       </footer>
-
-  <!-- Bootstrap JavaScript -->
+        
+        
+  <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- scripts template -->
+  <!-- Custom scripts for this template -->
   <script src="js/clean-blog.min.js"></script>
-        
-  
 
+  <!-- JS zegar -->        
+  <script type="text/javascript" src="js/javascript.js"></script>
+       
+        
 </body>
 
 </html>

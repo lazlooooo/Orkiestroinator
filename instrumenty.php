@@ -11,10 +11,9 @@
   <title>Projekt zaliczeniowy</title>
 
   <!-- Bootstrap CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">  
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/efekty.css" rel="stylesheet">
-  
   
 
   <!-- Fonts -->
@@ -24,13 +23,15 @@
 
   <!-- Styles template -->
   <link href="css/oriestroinator.min.css" rel="stylesheet">
-  
+    
 
 </head>
 
 
+  
+  
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top " id="mainNav">
+ <nav class="navbar navbar-expand-lg navbar-light fixed-top " id="mainNav">
     <div class="container"> 
         
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,19 +41,16 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index_ADMIN.php">Strona Główna</a>
+            <a class="nav-link" href="index.php">Strona Główna</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="logowanie.php">Logowanie</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="instrumenty_ADMIN.php">Instrumenty</a>
+            <a class="nav-link" href="instrumenty.php">Instrumenty</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="kontakt_ADMIN.html">Kontakt</a>
-          </li>
-            <li class="nav-item">
-            <a class="nav-link" href="BAZA_DANYCH/PROJEKTcz2.php">Baza Danych</a>
+            <a class="nav-link" href="kontakt.html">Kontakt</a>
           </li>
         </ul>
             
@@ -60,43 +58,64 @@
 
     </div>
   </nav>
-
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/kontakt.jpg')">
+  <header class="masthead" style="background-image: url('img/music2.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>KONTAKT</h1>
-            <span class="subheading">JEŚLI MASZ JAKIEKOLWIEK PYTANIE SKONTAKTUJ SIE Z NAMI!</span>
+            <h1>INSTRUMENTY</h1>
+            <span class="subheading">Wybierz swój intrument</span>
               
           </div>
         </div>
       </div>
     </div>
-      
   </header>
-
-  <!-- Post Content -->
-  <article>
-    <div class="container">
+  <!-- Main Content -->
+      <hr>
+  <div class="container">
     <div class="row">    
-        <div class="col-lg-3 col-md-10 mx-auto">
-           <h1 class="section-heading">Email</h1>      
-            <ul>
-                <li><a href="#">orkiestroinator@gmail.com</a></li>
-            </ul>
-        </div> 
-            <div class="col-lg-3 col-md-10 mx-auto">
-            <h1 class="section-heading">Telefon</h1> 
-                <ul>
-                <li><a href="#">+48 123456789</a></li>
-                </ul>
-        </div>
+        
+                                        
+                    <div class="col-lg-3 col-md-10 mx-auto">
+                        <a href="klawiatura.php" ><img src="img/gitara1.jpg" alt="zdj" class="sepia card-img-top" ></a>
+                                <div class="card-body">
+                                    
+                                     
+                                </div>
+                    </div>
+        
+                    <div class="col-lg-3 col-md-10 mx-auto">
+                           <a href="klawiatura.php" ><img src="img/piano4.jpg" alt="zdj" class="sepia card-img-top" ></a>
+                              <div class="card-body">
+                                   
+                                     
+                                </div>  
+                                    
+                    </div>
+        
+                    <div class="col-lg-3 col-md-10 mx-auto">
+                        <a href="klawiatura.php" ><img src="img/ukulele.jpg" alt="zdj" class="sepia card-img-top" ></a>
+                                <div class="card-body">
+                                    
+                                </div>
+                    </div>
+        
+                    
+        
+                    <div class="col-lg-3 col-md-10 mx-auto">
+                        <a href="klawiatura.php" ><img src="img/dog.png" alt="zdj" class="sepia card-img-top" ></a>
+                                <div class="card-body">
+                                   
+                                     
+                                </div>
+                        
+                    </div>
       </div>
-  </article>
-<br>
+    </div>
+      
   <hr>
 
   <!-- Footer -->
@@ -137,7 +156,7 @@
         </div>
       </footer>
 
-  <!-- Bootstrap JavaScript -->
+  <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -145,6 +164,8 @@
   <script src="js/clean-blog.min.js"></script>
         
   
+
+
 
 </body>
 

@@ -11,11 +11,11 @@
   <title>Projekt zaliczeniowy</title>
 
   <!-- Bootstrap CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">  
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/efekty.css" rel="stylesheet">
-  
-  
+  <link href="css/panel.css" rel="stylesheet">
+   
 
   <!-- Fonts -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -24,13 +24,12 @@
 
   <!-- Styles template -->
   <link href="css/oriestroinator.min.css" rel="stylesheet">
-  
 
 </head>
 
-
+<body>
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top " id="mainNav">
+ <nav class="navbar navbar-expand-lg navbar-light fixed-top " id="mainNav">
     <div class="container"> 
         
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,7 +42,7 @@
             <a class="nav-link" href="index_ADMIN.php">Strona Główna</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="logowanie.php">Logowanie</a>
+            <a class="nav-link" href="logowanie_ADMIN.php">Logowanie</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="instrumenty_ADMIN.php">Instrumenty</a>
@@ -60,43 +59,57 @@
 
     </div>
   </nav>
-
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/kontakt.jpg')">
+  <header class="masthead" style="background-image: url('img/music3.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>KONTAKT</h1>
-            <span class="subheading">JEŚLI MASZ JAKIEKOLWIEK PYTANIE SKONTAKTUJ SIE Z NAMI!</span>
-              
+            <h1>LOGOWANIE</h1>
+            <span class="subheading">Dołącz do tysiąca zadowolonych użytkowników!</span>
           </div>
         </div>
       </div>
     </div>
-      
   </header>
 
-  <!-- Post Content -->
-  <article>
-    <div class="container">
-    <div class="row">    
-        <div class="col-lg-3 col-md-10 mx-auto">
-           <h1 class="section-heading">Email</h1>      
-            <ul>
-                <li><a href="#">orkiestroinator@gmail.com</a></li>
-            </ul>
-        </div> 
-            <div class="col-lg-3 col-md-10 mx-auto">
-            <h1 class="section-heading">Telefon</h1> 
-                <ul>
-                <li><a href="#">+48 123456789</a></li>
-                </ul>
-        </div>
+    
+                       
+  <!-- Main Content -->
+  <div class="container">
+    <div class="col-lg-4 col-md-10 mx-auto">
+      <div class="login-page">
+    
+                
+                
+    <!-- Register form -->            
+      <div class="form">
+        <form class="register-form" action ="rejestruj.php" method="post">
+          <input type="text" name="imie_rej" placeholder="Imię" required/>   
+          <input type="text" name="email_rej" placeholder="Adres e-mail" required/>
+          <input type="password" name="haslo_rej" placeholder="Hasło" required/>
+          <input type="password" name="haslo_rej2" placeholder="Powtórz hasło" required/>
+          <button type="submit" value="post" name="zarejestruj">Zarejestruj</button>
+          <p class="message">Już zarejetrowany? <a href="#">Zaloguj się!</a></p>
+        </form>
+          
+   <!-- Login form -->
+            <form class="login-form" action="loguj.php" method="post">
+              <input type="text" name="login" id="login_log" placeholder="Nazwa użytkowanika" required/>
+              <input type="password" name="haslo" id="haslo_log" placeholder="Hasło" required/>
+              <button type="submit" value="post" name="zaloguj">Zaloguj</button>
+              <p class="message">Jescze nie stworzyłeś konta? <a href="#">Zarejestruj się!</a></p>
+            </form>
+          </div>
+        </div>      
       </div>
-  </article>
-<br>
+    </div>
+  
+    
+    
+    
+
   <hr>
 
   <!-- Footer -->
@@ -137,14 +150,19 @@
         </div>
       </footer>
 
-  <!-- Bootstrap JavaScript -->
+  <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- scripts template -->
+  
+
+  <!-- Custom scripts for this template -->
   <script src="js/clean-blog.min.js"></script>
         
-  
+  <!-- JS panel -->                
+
+  <script type="text/javascript" src="js/panel.js"></script>
+
 
 </body>
 
