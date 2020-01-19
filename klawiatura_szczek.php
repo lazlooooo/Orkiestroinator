@@ -49,7 +49,7 @@
   }
   ?>
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/tape.jpg')">
+  <header class="masthead" style="background-image: url('img/dogbg.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
