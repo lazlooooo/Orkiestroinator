@@ -270,15 +270,15 @@
                                         
                     
       </div>
-      <div>
-        <!--<input type="textbox" id="in">-->
-        <textarea id="in" rows="5" cols="40"></textarea>
+      <div style="text-align: center;">
+        
+        <textarea id="in" rows="5" cols="40"></textarea><br>
 <button onclick="read();">Zagraj</button>
 <button onclick="stop();">Stop</button>
-<input type="checkbox" id="czyGra" checked>
-<div class="slidecontainer">
-  <input type="range" min="200" max="2000" id="zakres" style="width: 400px;">
-  <p>WARTOŚĆ: <div id="demo"></div></p>
+<input type="checkbox" id="czyGra" checked> Graj
+  <div class="slidecontainer" style="margin-top: 50px;">
+  <input type="range" min="200" max="2000" id="zakres" style="width: 400px;"> </div>
+  <p>Prędkość odtwarzania w ms: <b id="demo"></b></p>
   <script>
  
  
@@ -300,7 +300,8 @@ suwak.oninput = function()
   <button onclick="generuj2();">Generuj gitarę</button>
 
 </div>
-<div id='tab' style="font-family: monospace;">x</div>
+<!--tu się wyświetla tabulatura-->
+<div id='tab' style="font-family: monospace;"></div>
         
       </div>
       <audio style="visibility: hidden;" id="z" src="szczek/szczek01.mp3" volume="0.1"></audio>
