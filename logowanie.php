@@ -29,33 +29,19 @@
 
 <body>
   <!-- Navigation -->
- <nav class="navbar navbar-expand-lg navbar-light fixed-top " id="mainNav">
-    <div class="container"> 
-        
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fas fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.php">Strona Główna</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="logowanie.php">Logowanie</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="instrumenty.php">Instrumenty</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="kontakt.html">Kontakt</a>
-          </li>
-        </ul>
-            
-      </div>
-
-    </div>
-  </nav>
+  <?php
+  session_start();
+  if(empty($_SESSION["zalogowany"])==1){ 
+    $_SESSION["zalogowany"] = 0;
+  include 'menuGuest.html';
+  }
+  else if($_SESSION["zalogowany"] == 1){
+  include 'menuUser.html';
+  }
+  else if ($_SESSION["zalogowany"] == 2){
+  include 'menuAdmin.html' ;
+  }
+  ?>
   <!-- Page Header -->
   <header class="masthead" style="background-image: url('img/music3.jpg')">
     <div class="overlay"></div>

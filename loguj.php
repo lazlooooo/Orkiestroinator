@@ -38,11 +38,11 @@ include "config.php";
         $_SESSION["id"]= $row["id"];
         if($row["admin"] == 1) {
           $_SESSION["zalogowany"]=2;
-          echo "<meta http-equiv='Refresh' content='0;url=index_ADMIN.php'>";
+          echo "<meta http-equiv='Refresh' content='0;url=index.php'>";
         break;
       }
       else { 
-        echo "<meta http-equiv='Refresh' content='0;url=index_USER.php'>";
+        echo "<meta http-equiv='Refresh' content='0;url=index.php'>";
         $_SESSION["zalogowany"]=1;}
       }
     }
