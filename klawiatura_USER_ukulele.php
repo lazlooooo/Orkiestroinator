@@ -71,7 +71,7 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>ZAGRAJ NA GITARZE</h1>
+            <h1>ZAGRAJ NA UKULELE</h1>
             <span class="subheading"></span>
               
           </div>
@@ -90,7 +90,7 @@
         
         
                          <div  class="col-sm marginesy">
-                        <a onclick="play('q');" ><img  src="img/Gitara-C-Q.png" alt="zdj" class="sepia card-img-top" ></a>
+                        <a onclick="play('q');" ><img  src="img/Ukulele-C-Q.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
@@ -98,14 +98,14 @@
                         </div>
         
                         <div  class="col-sm marginesy">
-                        <a onclick="play('w');" ><img  src="img/Gitara-D-W.png" alt="zdj" class="sepia card-img-top" ></a>
+                        <a onclick="play('w');" ><img  src="img/Ukulele-D-W.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
                                 </div>
                             </div>
                         <div class="col-sm marginesy">
-                        <a onclick="play('e');" ><img  src="img/Gitara-E-E.png" alt="zdj" class="sepia card-img-top" ></a>
+                        <a onclick="play('e');" ><img  src="img/Ukulele-E-E.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
@@ -115,7 +115,7 @@
         
                     
                         <div class="col-sm marginesy">
-                        <a onclick="play('r');" ><img src="img/Gitara-F-R.png" alt="zdj" class="sepia card-img-top" ></a>
+                        <a onclick="play('r');" ><img src="img/Ukulele-F-R.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
@@ -125,14 +125,14 @@
     
                         
                         <div class="col-sm marginesy">
-                        <a onclick="play('t');" ><img src="img/Gitara-G-T.png" alt="zdj" class="sepia card-img-top" ></a>
+                        <a onclick="play('t');" ><img src="img/Ukulele-G-T.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
                                 </div>
                         </div>
                         <div class="col-sm marginesy">
-                        <a onclick="play('y');" ><img src="img/Gitara-A-Y.png" alt="zdj" class="sepia card-img-top" ></a>
+                        <a onclick="play('y');" ><img src="img/Ukulele-A-Y.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
@@ -140,7 +140,7 @@
                     </div>
         
                     <div class="col-sm marginesy">
-                        <a onclick="play('u');" ><img src="img/Gitara-B-U.png" alt="zdj" class="sepia card-img-top" ></a>
+                        <a onclick="play('u');" ><img src="img/Ukulele-B-U.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
@@ -155,7 +155,7 @@
       <div class="row">
           
           <div  class="col-sm marginesy">
-                        <a onclick="play('a');" ><img src="img/Gitara-Cm-A.png" alt="zdj" class="sepia card-img-top" ></a>
+                        <a onclick="play('a');" ><img src="img/Ukulele-Cm-A.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
@@ -163,14 +163,14 @@
                         </div>
         
                         <div  class="col-sm marginesy">
-                        <a onclick="play('s');"><img src="img/Gitara-Dm-S.png" alt="zdj" class="sepia card-img-top" ></a>
+                        <a onclick="play('s');"><img src="img/Ukulele-Dm-S.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
                                 </div>
                             </div>
                         <div class="col-sm marginesy">
-                        <a onclick="play('d');" ><img src="img/Gitara-Em-D.png" alt="zdj" class="sepia card-img-top" ></a>
+                        <a onclick="play('d');" ><img src="img/Ukulele-Em-D.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
@@ -180,7 +180,7 @@
         
                     
                         <div class="col-sm marginesy">
-                        <a onclick="play('f');" ><img src="img/Gitara-Fm-F.png" alt="zdj" class="sepia card-img-top" ></a>
+                        <a onclick="play('f');" ><img src="img/Ukulele-Fm-F.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
@@ -190,14 +190,14 @@
     
                         
                         <div class="col-sm marginesy">
-                        <a onclick="play('g');" ><img src="img/Gitara-Gm-G.png" alt="zdj" class="sepia card-img-top" ></a>
+                        <a onclick="play('g');" ><img src="img/Ukulele-Gm-G.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
                                 </div>
                         </div>
                         <div class="col-sm marginesy">
-                        <a onclick="play('h');" ><img src="img/Gitara-Am-H.png" alt="zdj" class="sepia card-img-top" ></a>
+                        <a onclick="play('h');" ><img src="img/Ukulele-Am-H.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
@@ -205,7 +205,7 @@
                     </div>
         
                     <div class="col-sm marginesy">
-                        <a onclick="play('j');" ><img src="img/Gitara-Bm-J.png" alt="zdj" class="sepia card-img-top" ></a>
+                        <a onclick="play('j');" ><img src="img/Ukulele-Bm-J.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
@@ -220,7 +220,7 @@
       <div class="row">
           
           <div  class="col-sm marginesy">
-                        <a onclick="play('z');" ><img src="img/Gitara-C7-Z.png" alt="zdj" class="sepia card-img-top" ></a>
+                        <a onclick="play('z');" ><img src="img/Ukulele-C7-Z.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
@@ -228,14 +228,14 @@
                         </div>
         
                         <div  class="col-sm marginesy">
-                        <a onclick="play('x');" ><img src="img/Gitara-D7-X.png" alt="zdj" class="sepia card-img-top" ></a>
+                        <a onclick="play('x');" ><img src="img/Ukulele-D7-X.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
                                 </div>
                             </div>
                         <div class="col-sm marginesy">
-                        <a onclick="play('c');" ><img src="img/Gitara-E7-C.png" alt="zdj" class="sepia card-img-top" ></a>
+                        <a onclick="play('c');" ><img src="img/Ukulele-E7-C.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
@@ -245,7 +245,7 @@
         
                     
                         <div class="col-sm marginesy">
-                        <a onclick="play('v');"><img src="img/Gitara-F7-V.png" alt="zdj" class="sepia card-img-top" ></a>
+                        <a onclick="play('v');"><img src="img/Ukulele-F7-V.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
@@ -255,14 +255,14 @@
     
                         
                         <div class="col-sm marginesy">
-                        <a onclick="play('b');" ><img src="img/Gitara-G7-B.png" alt="zdj" class="sepia card-img-top" ></a>
+                        <a onclick="play('b');" ><img src="img/Ukulele-G7-B.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
                                 </div>
                         </div>
                         <div class="col-sm marginesy">
-                        <a onclick="play('n');" ><img src="img/Gitara-A7-N.png" alt="Ukulele-A7-N" class="sepia card-img-top"></a>
+                        <a onclick="play('n');" ><img src="img/Ukulele-A7-N.png" alt="Ukulele-A7-N" class="sepia card-img-top"></a>
                                 <div class="card-body">
                                     
                                      
@@ -270,7 +270,7 @@
                     </div>
         
                     <div class="col-sm marginesy">
-                        <a onclick="play('m');" ><img src="img/Gitara-B7-M.png" alt="Ukulele-B7-M" class="sepia card-img-top" ></a>
+                        <a onclick="play('m');" ><img src="img/Ukulele-B7-M.png" alt="Ukulele-B7-M" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
@@ -312,27 +312,27 @@ suwak.oninput = function()
   
         
       </div>
-<audio style="visibility: hidden;" id="q" src="gitara/gitaraC.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="w" src="gitara/gitaraD.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="e" src="gitara/gitaraE.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="r" src="gitara/gitaraF.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="t" src="gitara/gitaraG.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="y" src="gitara/gitaraA.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="u" src="gitara/gitaraB.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="a" src="gitara/gitaraCm.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="s" src="gitara/gitaraDm.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="d" src="gitara/gitaraEm.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="f" src="gitara/gitaraFm.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="g" src="gitara/gitaraGm.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="h" src="gitara/gitaraAm.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="j" src="gitara/gitaraBm.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="z" src="gitara/gitaraC7.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="x" src="gitara/gitaraD7.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="c" src="gitara/gitaraE7.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="v" src="gitara/gitaraF7.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="b" src="gitara/gitaraG7.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="n" src="gitara/gitaraA7.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="m" src="gitara/gitaraB7.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="q" src="ukulele/ukuleleC.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="w" src="ukulele/ukuleleD.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="e" src="ukulele/ukuleleE.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="r" src="ukulele/ukuleleF.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="t" src="ukulele/ukuleleG.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="y" src="ukulele/ukuleleA.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="u" src="ukulele/ukuleleB.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="a" src="ukulele/ukuleleCm.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="s" src="ukulele/ukuleleDm.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="d" src="ukulele/ukuleleEm.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="f" src="ukulele/ukuleleFm.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="g" src="ukulele/ukuleleGm.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="h" src="ukulele/ukuleleAm.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="j" src="ukulele/ukuleleBm.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="z" src="ukulele/ukuleleC7.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="x" src="ukulele/ukuleleD7.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="c" src="ukulele/ukuleleE7.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="v" src="ukulele/ukuleleF7.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="b" src="ukulele/ukuleleG7.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="n" src="ukulele/ukuleleA7.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="m" src="ukulele/ukuleleB7.mp3" volume="0.1"></audio>
     </div>
       
   <hr>

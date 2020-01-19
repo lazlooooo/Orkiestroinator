@@ -72,7 +72,7 @@
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
           <div class="site-heading">
-            <h1>POSZCZEKAJ SOBIE</h1>
+            <h1>ZAGRAJ NA PIANINIE</h1>
             <span class="subheading"></span>
               
           </div>
@@ -304,23 +304,23 @@ suwak.oninput = function()
 <div id='tab' style="font-family: monospace;"></div>
         
       </div>
-      <audio style="visibility: hidden;" id="z" src="szczek/szczek01.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="s" src="szczek/szczek02.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="x" src="szczek/szczek03.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="d" src="szczek/szczek04.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="c" src="szczek/szczek05.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="v" src="szczek/szczek06.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="g" src="szczek/szczek07.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="b" src="szczek/szczek08.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="h" src="szczek/szczek09.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="n" src="szczek/szczek10.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="j" src="szczek/szczek11.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="m" src="szczek/szczek12.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="," src="szczek/szczek13.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="l" src="szczek/szczek14.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="." src="szczek/szczek15.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id=";" src="szczek/szczek16.mp3" volume="0.1"></audio>
-<audio style="visibility: hidden;" id="/" src="szczek/szczek17.mp3" volume="0.1"></audio>
+      <audio style="visibility: hidden;" id="z" src="pianino/pianoZ.mp3" volume="0.2"></audio>
+<audio style="visibility: hidden;" id="s" src="pianino/pianoS.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="x" src="pianino/pianoX.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="d" src="pianino/pianoD.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="c" src="pianino/pianoC.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="v" src="pianino/pianoV.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="g" src="pianino/pianoG.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="b" src="pianino/pianoB.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="h" src="pianino/pianoH.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="n" src="pianino/pianoN.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="j" src="pianino/pianoJ.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="m" src="pianino/pianoM.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="," src="pianino/pianoPrzecinek.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="l" src="pianino/pianoL.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="." src="pianino/pianoKropka.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id=";" src="pianino/pianoSrednik.mp3" volume="0.1"></audio>
+<audio style="visibility: hidden;" id="/" src="pianino/pianoSlash.mp3" volume="0.1"></audio>
     </div>
       
   <hr>

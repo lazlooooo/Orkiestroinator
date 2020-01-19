@@ -23,6 +23,8 @@
 
   <!-- Styles template -->
   <link href="css/oriestroinator.min.css" rel="stylesheet">
+
+  
     
 
 </head>
@@ -83,7 +85,7 @@
         
                                         
                     <div class="col-lg-3 col-md-10 mx-auto">
-                        <a href="klawiatura_USER.php" ><img src="img/gitara1.jpg" alt="zdj" class="sepia card-img-top" ></a>
+                        <a href="klawiatura_USER_gitara.php" ><img src="img/gitara1.jpg" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
@@ -91,7 +93,7 @@
                     </div>
         
                     <div class="col-lg-3 col-md-10 mx-auto">
-                           <a href="klawiatura_USER.php" ><img src="img/piano4.jpg" alt="zdj" class="sepia card-img-top" ></a>
+                           <a href="klawiatura_USER_pianino.php" ><img src="img/piano4.jpg" alt="zdj" class="sepia card-img-top" ></a>
                               <div class="card-body">
                                    
                                      
@@ -100,14 +102,14 @@
                     </div>
         
                     <div class="col-lg-3 col-md-10 mx-auto">
-                        <a href="klawiatura_USER.php" ><img src="img/ukulele.jpg" alt="zdj" class="sepia card-img-top" ></a>
+                        <a href="klawiatura_USER_ukulele.php" ><img src="img/ukulele.jpg" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                 </div>
                     </div>
         
                      <div class="col-lg-3 col-md-10 mx-auto">
-                        <a href="klawiatura_USER.php" ><img src="img/dog.png" alt="zdj" class="sepia card-img-top" ></a>
+                        <a href="klawiatura_USER_szczek.php" ><img src="img/dog.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                    
                                      
