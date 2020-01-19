@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 13 Sty 2020, 21:54
--- Wersja serwera: 10.4.11-MariaDB
--- Wersja PHP: 7.4.1
+-- Czas generowania: 19 Sty 2020, 11:45
+-- Wersja serwera: 10.4.8-MariaDB
+-- Wersja PHP: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,16 +25,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Struktura tabeli dla tabeli `piosenki`
+--
+
+CREATE TABLE `piosenki` (
+  `id` int(6) UNSIGNED NOT NULL,
+  `piosenka` varchar(300) COLLATE utf8_polish_ci NOT NULL,
+  `id_uzytkownika` int(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
+--
+-- Zrzut danych tabeli `piosenki`
+--
+
+INSERT INTO `piosenki` (`id`, `piosenka`, `id_uzytkownika`) VALUES
+(1, 'zxcvbnm,', 2);
+
+-- --------------------------------------------------------
+
+--
 -- Struktura tabeli dla tabeli `uzytkownicy`
 --
 
 CREATE TABLE `uzytkownicy` (
-  `id` int(11) NOT NULL,
-  `imie` varchar(15) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
-  `haslo` varchar(25) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
-  `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
+  `id` int(6) UNSIGNED NOT NULL,
+  `imie` varchar(30) COLLATE utf8_polish_ci NOT NULL,
+  `haslo` varchar(50) COLLATE utf8_polish_ci NOT NULL,
+  `email` varchar(50) COLLATE utf8_polish_ci NOT NULL,
   `admin` tinyint(1) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 --
 -- Zrzut danych tabeli `uzytkownicy`
@@ -42,13 +61,17 @@ CREATE TABLE `uzytkownicy` (
 
 INSERT INTO `uzytkownicy` (`id`, `imie`, `haslo`, `email`, `admin`) VALUES
 (1, 'Jakub', '123', 'jaku.lenart@gmail.com', 1),
-(2, 'Adrianna', '321', 'adrianna.kurzawa@gmail.com', 0),
-(3, 'Jakub', '12345', 'jakub.lazar@gmail.com', 1),
-(28, 'jakub', 'cd', 'ab', 0);
+(2, 'Adrianna', '321', 'adrianna.kurzawa@edu.uekat.pl', 0);
 
 --
 -- Indeksy dla zrzutów tabel
 --
+
+--
+-- Indeksy dla tabeli `piosenki`
+--
+ALTER TABLE `piosenki`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeksy dla tabeli `uzytkownicy`
@@ -57,14 +80,20 @@ ALTER TABLE `uzytkownicy`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT dla tabel zrzutów
+-- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT dla tabeli `piosenki`
+--
+ALTER TABLE `piosenki`
+  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT dla tabeli `uzytkownicy`
 --
 ALTER TABLE `uzytkownicy`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(6) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
