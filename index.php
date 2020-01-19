@@ -14,7 +14,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/efekty.css" rel="stylesheet">
-  <link href="css/lakeland.min.css" rel="stylesheet">    
+     
 
 
 
@@ -68,7 +68,10 @@
  <div class="container">
     <div class="row">
       <div class="col-lg-7 col-md-10 mx-auto">
-          <img src="img/info.png" alt="zdj"  >
+          <h1>O aplikacji</h1>
+          <p>Nasza aplikacja umożliwia konwesję znaków na dźwięki oraz tabulaturę dla gitary i ukulele. Jeśli nie masz własnego instrumentu lub masz trudności z odnalezieniem właściwych dźwięków na ukulele bądź gitarze ta aplikacja jest dla Ciebie.</p>
+          <h1>Dostępne instrumenty</h1>
+          <p>Użyj myszki lub klawiatury aby zagrać na jednym z 4 dostępnych instrumentów. Pianino, ukulele, gitara i ciut bardziej kreatywny instrument - pies - czekają aż wciągniesz się w świetną muzyczną zabawę.</p>
                                 <div class="card-body">
                                 </div>
           <hr>

@@ -70,7 +70,7 @@
                             
         
         
-                    
+                    <!--IKONY KLIKALNE-->
         
         
                          <div  class="col-sm marginesy">
@@ -266,36 +266,59 @@
           
       </div>
       
-      
-      <div style="text-align: center;">
-        
+  <div class="row">
+      <div class="col-sm" style="text-align: center;">
+        <!--TEXTAREA-->
         <textarea id="in" rows="5" cols="40"></textarea><br>
-<button onclick="read();">Zagraj</button>
-<button onclick="stop();">Stop</button>
-<input type="checkbox" id="czyGra" checked> Graj
-  <div class="slidecontainer" style="margin-top: 50px;">
-  <input type="range" min="200" max="2000" id="zakres" style="width: 400px;"> </div>
-  <p>Prędkość odtwarzania w ms: <b id="demo"></b></p>
-  <script>
- 
- 
-var suwak = document.getElementById("zakres"); 
-var output = document.getElementById("demo");
- 
-output.innerHTML = suwak.value;               
- 
-suwak.oninput = function()                  
-{
-  output.innerHTML = this.value;
-}
- 
-</script>
-   
-<div>
+        <button onclick="read();">Zagraj</button>
+        <button onclick="stop();">Stop</button>
+        <input type="checkbox" id="czyGra" checked> Graj
   
-  
-        
+        <!--SUWACZEK-->
+        <div class="slidecontainer" style="margin-top: 50px;">
+        <input type="range" min="200" max="2000" id="zakres" style="width: 400px;"> </div>
+        <p>Prędkość odtwarzania w ms: <b id="demo"></b></p>
+              <script>
+              var suwak = document.getElementById("zakres"); 
+              var output = document.getElementById("demo");
+              output.innerHTML = suwak.value;               
+              suwak.oninput = function()                  
+                    {
+                      output.innerHTML = this.value;
+                    }
+              </script>
+        <hr>
+        <!--WYBIERANIE PIOSENKI Z BAZY-->
+        <form action="">
+            <select id="piosenka">
+              <option>Wlazł kotek na płotek</option>
+              <option>Wlazł i spadł</option>
+            </select><br><br>
+          <button onclick="funkcja_zapisz();">Zapisz</button><button onclick="funkcja_wczytaj();">Wczytaj</button>
+        </form>
+
+        <!--WYBIERANIE PIOSENKI Z BAZY end-->
       </div>
+  
+
+      <div class="col-sm">
+        <!--INSTRUKCJA-->
+        <div>
+          <h3>Instrukcja</h3>
+          <p>Możesz grać bezpośrednio klikając myszką w obrazki przedstawiające akordy lub naciskając klawisze na klawiaturze.</p>
+          
+          <p>Obok znajduje się miejsce na tekst, który przy pomocy przycisku <b>Zagraj</b> przekonwertujesz na dźwięk. Aby stworzyć pauzę pomiędzy dźwiękami możesz wstawiać znaki spacji.</p>
+
+          <p><b>Suwakiem</b> zmienisz prędkość odtwarzania.</p>
+            <p><b>Stop</b> służy do zatrzymywania dźwięku. Aby rozpocząć odtwarzanie od pewnego fragmentu ustaw kursor <b>|</b> w odpowiednim miejscu.</p>
+          <p>Jeśli nie chcesz słyszeć na żywo klikanych klawiszy odznacz <b>Graj</b></p>
+          <p>Wczytaj lub zapisz piosenkę wybierając odpowiednią pozycję na liście rozwijalnej.</p>                       
+         </div>
+        </div>                        
+    </div>
+   
+ </div>
+
 <audio style="visibility: hidden;" id="q" src="gitara/gitaraC.mp3" volume="0.1"></audio>
 <audio style="visibility: hidden;" id="w" src="gitara/gitaraD.mp3" volume="0.1"></audio>
 <audio style="visibility: hidden;" id="e" src="gitara/gitaraE.mp3" volume="0.1"></audio>
