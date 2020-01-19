@@ -14,6 +14,7 @@
       padding: 0px;
     }
   </style>
+
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
@@ -66,14 +67,15 @@
   <!-- Main Content -->
       <hr>
   <div class="container ">
-    <div class="row d-none d-xl-block">    
+  <div class="d-none d-lg-block">
+    <div class="row">    
                             
         
         
                     
         
         
-                         <div  class="col-sm marginesy">
+                         <div  class="col-sm">
                         <a onclick="play('q');" ><img  src="img/Ukulele-C-Q.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
@@ -81,14 +83,14 @@
                                 </div>
                         </div>
         
-                        <div  class="col-sm marginesy">
+                        <div  class="col-sm">
                         <a onclick="play('w');" ><img  src="img/Ukulele-D-W.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
                                 </div>
                             </div>
-                        <div class="col-sm marginesy">
+                        <div class="col-sm">
                         <a onclick="play('e');" ><img  src="img/Ukulele-E-E.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
@@ -98,7 +100,7 @@
                     
         
                     
-                        <div class="col-sm marginesy">
+                        <div class="col-sm">
                         <a onclick="play('r');" ><img src="img/Ukulele-F-R.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
@@ -108,14 +110,14 @@
     
     
                         
-                        <div class="col-sm marginesy">
+                        <div class="col-sm">
                         <a onclick="play('t');" ><img src="img/Ukulele-G-T.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
                                 </div>
                         </div>
-                        <div class="col-sm marginesy">
+                        <div class="col-sm">
                         <a onclick="play('y');" ><img src="img/Ukulele-A-Y.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
@@ -123,7 +125,7 @@
                                 </div>
                     </div>
         
-                    <div class="col-sm marginesy">
+                    <div class="col-sm">
                         <a onclick="play('u');" ><img src="img/Ukulele-B-U.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
@@ -136,7 +138,7 @@
                                         
                     
       </div>
-      <div class="row d-none d-xl-block">
+      <div class="row">
           
           <div  class="col-sm marginesy">
                         <a onclick="play('a');" ><img src="img/Ukulele-Cm-A.png" alt="zdj" class="sepia card-img-top" ></a>
@@ -201,7 +203,7 @@
           
           
       </div>
-      <div class="row d-none d-xl-block">
+      <div class="row">
           
           <div  class="col-sm marginesy">
                         <a onclick="play('z');" ><img src="img/Ukulele-C7-Z.png" alt="zdj" class="sepia card-img-top" ></a>
@@ -265,6 +267,7 @@
           
           
       </div>
+    </div>
       
       
        <div class="row">
@@ -306,7 +309,7 @@
         <!--INSTRUKCJA-->
         <div>
           <h3>Instrukcja</h3>
-          <p class="d-none d-xl-block">Możesz grać bezpośrednio klikając myszką w obrazki przedstawiające akordy lub naciskając klawisze na klawiaturze.</p>
+          <p class="d-none d-lg-block">Możesz grać bezpośrednio klikając myszką w obrazki przedstawiające akordy lub naciskając klawisze na klawiaturze.</p>
           
           <p>Obok znajduje się miejsce na tekst, który przy pomocy przycisku <b>Zagraj</b> przekonwertujesz na dźwięk. Aby stworzyć pauzę pomiędzy dźwiękami możesz wstawiać znaki spacji.</p>
 

@@ -66,7 +66,8 @@
   <!-- Main Content -->
       <hr>
   <div class="container ">
-    <div class="row d-none d-xl-block">    
+    <div class="d-none d-lg-block">
+    <div class="row">    
                             
         
         
@@ -136,7 +137,7 @@
                                         
                     
       </div>
-      <div class="row d-none d-xl-block">
+      <div class="row">
           
           <div  class="col-sm marginesy">
                         <a onclick="play('a');" ><img src="img/Gitara-Cm-A.png" alt="zdj" class="sepia card-img-top" ></a>
@@ -201,7 +202,7 @@
           
           
       </div>
-      <div class="row d-none d-xl-block">
+      <div class="row">
           
           <div  class="col-sm marginesy">
                         <a onclick="play('z');" ><img src="img/Gitara-C7-Z.png" alt="zdj" class="sepia card-img-top" ></a>
@@ -265,6 +266,7 @@
           
           
       </div>
+    </div>
       
   <div class="row">
       <div class="col-sm" style="text-align: center;">
@@ -305,7 +307,7 @@
         <!--INSTRUKCJA-->
         <div>
           <h3>Instrukcja</h3>
-          <p class="d-none d-xl-block">Możesz grać bezpośrednio klikając myszką w obrazki przedstawiające akordy lub naciskając klawisze na klawiaturze.</p>
+          <p class="d-none d-lg-block">Możesz grać bezpośrednio klikając myszką w obrazki przedstawiające akordy lub naciskając klawisze na klawiaturze.</p>
           
           <p>Obok znajduje się miejsce na tekst, który przy pomocy przycisku <b>Zagraj</b> przekonwertujesz na dźwięk. Aby stworzyć pauzę pomiędzy dźwiękami możesz wstawiać znaki spacji.</p>
 
