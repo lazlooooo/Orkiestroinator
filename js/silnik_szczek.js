@@ -10,10 +10,20 @@ var pause = false;
 			  return new Promise(resolve => setTimeout(resolve, ms));
 			}
 
+			function stop(){
+		pause=true;
+		//audio.pause();
+	}
+		let s = "";
+		let select = "";
     	async function read() {
+    		pause = true;
+
+    		await sleep(document.getElementById('zakres').value);
+    				    
 			pause=false;
-    		let s = document.getElementById('in').value.toString();
-			let select = document.getElementById('in');
+    		s = document.getElementById('in').value.toString();
+			select = document.getElementById('in');
 			for(var i = 0; i < s.length; i++){
 			if(pause == false)
 			{
@@ -22,6 +32,7 @@ var pause = false;
 			select.setSelectionRange(i,i+1);
 
 			await sleep(document.getElementById('zakres').value);
+
 			}
 			}
 			}
@@ -34,7 +45,4 @@ var pause = false;
 		}
 		
 	})
-	function stop(){
-		pause=true;
-		audio.pause();
-	}
+	
