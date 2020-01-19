@@ -1,4 +1,5 @@
-function generuj() {		
+function generuj() {
+		//GENEROWANIE TABULATURY DLA UKULELE		
 		let tekst = document.getElementById('in').value.toString();
 		var dlugosc = tekst.length;
 		document.getElementById('tab').innerHTML = "";
@@ -148,7 +149,8 @@ function generuj() {
 	}
 
 
-function generuj2() {		
+function generuj2() {	
+		//GENEROWANIE TABULATURY DLA GITARY	
 		let tekst = document.getElementById('in').value.toString();
 		var dlugosc = tekst.length;
 		document.getElementById('tab').innerHTML = "";
