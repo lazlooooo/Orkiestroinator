@@ -80,7 +80,7 @@
         
                                         
                     <div class="col-lg-3 col-md-10 mx-auto">
-                        <a href="klawiatura.php" ><img src="img/gitara1.jpg" alt="zdj" class="sepia card-img-top" ></a>
+                        <a onclick="informacja();"><img src="img/gitara1.jpg" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                      
@@ -88,7 +88,7 @@
                     </div>
         
                     <div class="col-lg-3 col-md-10 mx-auto">
-                           <a href="klawiatura.php" ><img src="img/piano4.jpg" alt="zdj" class="sepia card-img-top" ></a>
+                           <a onclick="informacja();"><img src="img/piano4.jpg" alt="zdj" class="sepia card-img-top" ></a>
                               <div class="card-body">
                                    
                                      
@@ -97,7 +97,7 @@
                     </div>
         
                     <div class="col-lg-3 col-md-10 mx-auto">
-                        <a href="klawiatura.php" ><img src="img/ukulele.jpg" alt="zdj" class="sepia card-img-top" ></a>
+                        <a onclick="informacja();"><img src="img/ukulele.jpg" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                     
                                 </div>
@@ -106,7 +106,7 @@
                     
         
                     <div class="col-lg-3 col-md-10 mx-auto">
-                        <a href="klawiatura.php" ><img src="img/dog.png" alt="zdj" class="sepia card-img-top" ></a>
+                        <a  onclick="informacja();"><img src="img/dog.png" alt="zdj" class="sepia card-img-top" ></a>
                                 <div class="card-body">
                                    
                                      
@@ -155,13 +155,19 @@
                        
         </div>
       </footer>
-
+      <!-- skrypt messagebox-->
+		<script>
+				function informacja() {
+  				alert("Nie masz dostępu do tego zasobu! Zaloguj się aby przejść dalej");
+				}
+</script>
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- scripts template -->
   <script src="js/clean-blog.min.js"></script>
+
         
   
 
