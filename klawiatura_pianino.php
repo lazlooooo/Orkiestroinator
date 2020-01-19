@@ -66,7 +66,7 @@
   <!-- Main Content -->
       <hr>
   <div class="container">
-    <div class="row">    
+    <div class="row d-none d-xl-block">    
                             
         
         
@@ -224,10 +224,7 @@
                                 </div> 
                                                         
                         </div>
-        
-        
-                            
-        
+
                         <div class="float-left">
                            <a onclick="play(';');" ><img style="position: relative; right: 100px; z-index: 2" src="img/piano/srednik_1.png" alt="zdj" ></a>
                               <div class="card-body">
@@ -244,14 +241,8 @@
                               <div class="card-body">
                                    
                                      
-                                </div> 
-                                                            
-                        </div>
-        
-                                
-                                
-                                        
-                    
+                                </div>                                  
+                        </div>                
       </div>
       <div class="row">
       <div class="col-sm" style="text-align: center;">
@@ -293,7 +284,7 @@
         <!--INSTRUKCJA-->
         <div>
           <h3>Instrukcja</h3>
-          <p>Możesz grać bezpośrednio klikając myszką w obrazki przedstawiające klawisze pianina lub naciskając klawisze na klawiaturze.</p>
+          <p class="d-none d-xl-block">Możesz grać bezpośrednio klikając myszką w obrazki przedstawiające klawisze pianina lub naciskając klawisze na klawiaturze.</p>
           
           <p>Obok znajduje się miejsce na tekst, który przy pomocy przycisku <b>Zagraj</b> przekonwertujesz na dźwięk. Aby stworzyć pauzę pomiędzy dźwiękami możesz wstawiać znaki spacji.</p>
 
