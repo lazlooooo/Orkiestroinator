@@ -69,10 +69,10 @@
     <!-- Register form -->            
       <div class="form">
         <form class="register-form" action ="rejestruj.php" method="post">
-          <input type="text" name="imie_rej" placeholder="Imię" required/>   
-          <input type="text" name="email_rej" placeholder="Adres e-mail" required/>
-          <input type="password" name="haslo_rej" placeholder="Hasło" required/>
-          <input type="password" name="haslo_rej2" placeholder="Powtórz hasło" required/>
+          <input type="text" name="imie_rej" placeholder="Imię" minlength="2" required/>   
+          <input type="email" name="email_rej" placeholder="Adres e-mail" required/>
+          <input type="password" name="haslo_rej" minlength="8" placeholder="Hasło" required/>
+          <input type="password" name="haslo_rej2" minlength="8" placeholder="Powtórz hasło" required/>
           <button type="submit" value="post" name="zarejestruj">Zarejestruj</button>
           <p class="message">Już zarejetrowany? <a href="#">Zaloguj się!</a></p>
         </form>

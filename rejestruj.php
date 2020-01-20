@@ -27,7 +27,7 @@
     include "config.php";
 
        
-          if(!empty($_POST["imie_rej"]) && !empty($_POST["email_rej"]) && !empty($_POST["haslo_rej"]) && !empty($_POST["haslo_rej2"])){	//oraz czy uzupełniono wszystkie dane
+          if(!empty($_POST["imie_rej"]) && !empty($_POST["email_rej"]) && !empty($_POST["haslo_rej"]) && !empty($_POST["haslo_rej2"]) && $_POST["haslo_rej2"] == $_POST["haslo_rej"]){	//oraz czy uzupełniono wszystkie dane
                 $sql = "select * from uzytkownicy where email='".htmlspecialchars($_POST["email_rej"])."'";
                 $result = $conn->query($sql);                                                           
             if($result->num_rows > 0 ) echo "<center>Użytkownik o podanym loginie już istnieje!</center><meta http-equiv='Refresh' content='1;url=logowanie.php'>"; // sprawdzanie czy użytkownik o podanej nazwie już istnieje
@@ -36,7 +36,7 @@
               echo "<center>Rejestracja przebiegła pomyślnie. Zostaniesz teraz przekierowany do strony głownej.</center><meta http-equiv='Refresh' content='1;url=index.php'>";
               }
           }
-          else echo "<center>Nie uzupełniono wszystkich pól!!!</center><meta http-equiv='Refresh' content='3;url=logowanie.php'>";
+          else echo "<center>Nie uzupełniono wszystkich pól lub hasła są niezgodne!!!</center><meta http-equiv='Refresh' content='3;url=logowanie.php'>";
         
         $conn->close();
 
