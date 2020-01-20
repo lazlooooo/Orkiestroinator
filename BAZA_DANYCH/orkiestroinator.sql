@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 13 Sty 2020, 18:50
--- Wersja serwera: 10.1.36-MariaDB
--- Wersja PHP: 7.2.11
+-- Czas generowania: 20 Sty 2020, 03:42
+-- Wersja serwera: 10.4.11-MariaDB
+-- Wersja PHP: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,15 +25,27 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Struktura tabeli dla tabeli `piosenki`
+--
+
+CREATE TABLE `piosenki` (
+  `id_piosenki` int(32) NOT NULL,
+  `id_user` int(32) NOT NULL,
+  `instrument` int(4) NOT NULL,
+  `tytul` varchar(255) DEFAULT NULL,
+  `piosenka` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Struktura tabeli dla tabeli `uzytkownicy`
 --
 
 CREATE TABLE `uzytkownicy` (
   `id` int(11) NOT NULL,
   `imie` varchar(15) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
-  `nazwisko` varchar(20) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
-  `login` varchar(25) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
-  `haslo` varchar(25) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
+  `haslo` varchar(255) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
   `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_polish_ci NOT NULL,
   `admin` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -42,37 +54,19 @@ CREATE TABLE `uzytkownicy` (
 -- Zrzut danych tabeli `uzytkownicy`
 --
 
-INSERT INTO `uzytkownicy` (`id`, `imie`, `nazwisko`, `login`, `haslo`, `email`, `admin`) VALUES
-(1, 'Jakub', 'Lenart', 'jakub.lenart', '123', 'jaku.lenart@gmail.com', 1),
-(2, 'Adrianna', 'Kurzawa', 'adrianna.kurzawa', '321', 'adrianna.kurzawa@gmail.com', 0),
-(3, 'Jakub', 'Lazar', 'jakub.lazar', '12345', 'jakub.lazar@gmail.com', 1),
-(4, '', '', '', '', '', 0),
-(5, '', '', '', '', '', 0),
-(6, '', '', '', '', '', 0),
-(7, '', '', '', '', '', 0),
-(8, '', '', '', '', '', 0),
-(9, '', '', '', '', '', 0),
-(10, '', '', '', '', '', 0),
-(11, '', '', '', '', '', 0),
-(12, '', '', '', '', '', 0),
-(13, '', '', '', '', '', 0),
-(14, '', '', '', '', '', 0),
-(15, '', '', '', '', '', 0),
-(16, '', '', '', '', '', 0),
-(17, '', '', '', '', '', 0),
-(18, '', '', '', '', '', 0),
-(19, '', '', '', '', '', NULL),
-(20, '', '', '', '', '', 0),
-(21, '', '', '', '', '', NULL),
-(22, '', '', '', '', '', 0),
-(23, '', '', '', '', '', NULL),
-(24, '', '', '', '', '', 0),
-(25, 'asd', 'asd', 'asd', 'asd', 'asd', NULL),
-(26, 'asd', 'asd', 'asd', 'asd', 'asd', 0);
+INSERT INTO `uzytkownicy` (`id`, `imie`, `haslo`, `email`, `admin`) VALUES
+(33, 'Kubson', '176cd9f6f18f8905e3c7609b3ab62ef2', 'nowy', 0),
+(34, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', 1);
 
 --
 -- Indeksy dla zrzutów tabel
 --
+
+--
+-- Indeksy dla tabeli `piosenki`
+--
+ALTER TABLE `piosenki`
+  ADD PRIMARY KEY (`id_piosenki`);
 
 --
 -- Indeksy dla tabeli `uzytkownicy`
@@ -81,14 +75,20 @@ ALTER TABLE `uzytkownicy`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT dla tabel zrzutów
 --
+
+--
+-- AUTO_INCREMENT dla tabeli `piosenki`
+--
+ALTER TABLE `piosenki`
+  MODIFY `id_piosenki` int(32) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT dla tabeli `uzytkownicy`
 --
 ALTER TABLE `uzytkownicy`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

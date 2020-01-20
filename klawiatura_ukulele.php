@@ -273,7 +273,10 @@
        <div class="row">
       <div class="col-sm" style="text-align: center;">
         <!--TEXTAREA-->
-        <textarea id="in" rows="5" cols="40"></textarea><br>
+        <textarea id="in" rows="5" cols="40" form='zapisywanie' name='songToSave'><?php if(empty($_POST['selectSong']) ==0){ 
+          $values = explode(':',$_POST['selectSong']);
+          echo $values[0];
+         }  ?></textarea><br>
         <button onclick="read();">Zagraj</button>
         <button onclick="stop();">Stop</button>
         <input type="checkbox" id="czyGra" checked> Graj
@@ -293,14 +296,32 @@
               </script>
         <hr>
         <!--WYBIERANIE PIOSENKI Z BAZY-->
-        <form action="">
-            <select id="piosenka">
-              <option>Wlazł kotek na płotek</option>
-              <option>Wlazł i spadł</option>
-            </select><br><br>
-          <button onclick="funkcja_zapisz();">Zapisz</button><button onclick="funkcja_wczytaj();">Wczytaj</button>
-        </form>
+        
+        <form id='zapisywanie' method='POST'>
+        <input type='hidden' value='2' name='instrumentId'>
+        <select name='selectSong'>
+        <?php
 
+            include 'config.php';
+            $instrument = 2;
+            $sql = "select * from piosenki where id_user ='".$_SESSION['id']."' AND instrument='".$instrument."'";
+            $wynik=$conn -> query($sql);
+
+            if($wynik==false)
+            {
+                echo 'cos poszło nie tak z zapytaniem';
+                $conn->close();
+                exit;
+            }
+            while(($rekord= $wynik ->fetch_assoc()) !=null)
+            {
+              echo "<option value='".$rekord['piosenka'].":".$rekord['id_piosenki']."'>".$rekord['tytul']."</option>";
+            }
+            ?>
+            </select> <button type='submit' formaction='klawiatura_ukulele.php'>Wczytaj</button><button type='submit' formaction='delete.php'>Usuń</button><br><br>
+            <input type='text' name='tytul' placeholder='Wpisz tytuł piosenki' >
+          <button type='submit' formaction='save.php'>Zapisz</button>
+        </form>
         <!--WYBIERANIE PIOSENKI Z BAZY end-->
       </div>
   

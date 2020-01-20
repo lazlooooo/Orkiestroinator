@@ -1,20 +1,20 @@
 <?php
-include 'config.php';
+include '../config.php';
 
 $id =$_POST['id'];
 
 $sql = "Delete from uzytkownicy where id='$id'";
-$wynik=$polaczenie -> query($sql);
+$wynik=$conn -> query($sql);
 
 if($wynik==false)
 {
    echo 'cos poszło nie tak z zapytaniem';
-   $polaczenie->close();
+   $conn->close();
    exit;
 }
 else
 {
-    $polaczenie->close();
+    $conn->close();
     header("location: baza.php");
 }
 

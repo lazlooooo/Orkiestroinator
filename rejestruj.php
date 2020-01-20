@@ -30,10 +30,10 @@
           if(!empty($_POST["imie_rej"]) && !empty($_POST["email_rej"]) && !empty($_POST["haslo_rej"]) && !empty($_POST["haslo_rej2"])){	//oraz czy uzupełniono wszystkie dane
                 $sql = "select * from uzytkownicy where email='".htmlspecialchars($_POST["email_rej"])."'";
                 $result = $conn->query($sql);                                                           
-            if($result->num_rows > 0 ) echo "Użytkownik o podanym loginie już istnieje!!!"; // sprawdzanie czy użytkownik o podanej nazwie już istnieje
+            if($result->num_rows > 0 ) echo "<center>Użytkownik o podanym loginie już istnieje!</center><meta http-equiv='Refresh' content='1;url=logowanie.php'>"; // sprawdzanie czy użytkownik o podanej nazwie już istnieje
             else{
-              $conn->query("insert into uzytkownicy values(NULL, '".htmlspecialchars($_POST["imie_rej"])."', '".htmlspecialchars($_POST["haslo_rej"])."', '".htmlspecialchars($_POST["email_rej"])."', 0)"); // zapisywanie rekordu do bazy
-              echo "<center>Rejestracja przebiegła pomyślnie. Zostaniesz teraz przekierowany do strony głownej.</center><meta http-equiv='Refresh' content='3;url=index.php'>";
+              $conn->query("insert into uzytkownicy values(NULL, '".htmlspecialchars($_POST["imie_rej"])."', '".htmlspecialchars(md5($_POST["haslo_rej"]))."', '".htmlspecialchars($_POST["email_rej"])."', 0)"); // zapisywanie rekordu do bazy
+              echo "<center>Rejestracja przebiegła pomyślnie. Zostaniesz teraz przekierowany do strony głownej.</center><meta http-equiv='Refresh' content='1;url=index.php'>";
               }
           }
           else echo "<center>Nie uzupełniono wszystkich pól!!!</center><meta http-equiv='Refresh' content='3;url=logowanie.php'>";

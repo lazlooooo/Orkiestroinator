@@ -25,11 +25,10 @@ if(empty($_SESSION["zalogowany"]))$_SESSION["zalogowany"]=0;
 
 include "config.php";
 
-//if($_GET["wyloguj"]=="tak"){$_SESSION["zalogowany"]=0;echo "Zostałeś wylogowany z serwisu";}
-//if($_SESSION["zalogowany"]!=1){
+
 	if(!empty($_POST["login"]) && !empty($_POST["haslo"])){
         //zdefiniowanie kodu sql
-        $sql = "SELECT id, admin FROM uzytkownicy WHERE email = '".htmlspecialchars($_POST["login"])."' AND haslo = '".htmlspecialchars($_POST["haslo"])."'";
+        $sql = "select id, admin FROM uzytkownicy WHERE email = '".htmlspecialchars($_POST["login"])."' AND haslo = '".md5($_POST["haslo"])."'";
         //przypisanie rezultatu wykonania kodu sql
         $result = $conn->query($sql);
         
@@ -46,11 +45,9 @@ include "config.php";
         $_SESSION["zalogowany"]=1;}
       }
     }
-		else echo "<center>Wprowadzono złe dane spróbój ponownie</center> <meta http-equiv='Refresh' content='0;url=logowanie.php'>";
+		else echo "<center>Wprowadzono złe dane spróbój ponownie</center> <meta http-equiv='Refresh' content='1;url=logowanie.php'>";
 		}
-	//else {};
-//}
-//else{};
+
 
     
 

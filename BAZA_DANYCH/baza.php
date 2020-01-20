@@ -1,10 +1,9 @@
 <?php
 session_start();
-print_r($_SESSION);
 if($_SESSION["zalogowany"]!=2)echo "Witryna dostępna tylko z poziomu admina!";
 else{
 
-include 'config.php';
+include '../config.php';
 
 echo '
         <h1>BAZA DANYCH ZAREJESTROWANYCH UŻYTKOWNIKÓW: </h1><br>
@@ -24,12 +23,12 @@ echo '
 
 $sql = 'select * from uzytkownicy';
 
-$wynik=$polaczenie -> query($sql);
+$wynik=$conn -> query($sql);
 
     if($wynik==false)
     {
         echo 'cos poszło nie tak z zapytaniem';
-        $polaczenie->close();
+        $conn->close();
         exit;
     }
     while(($rekord= $wynik ->fetch_assoc())  !=null)
@@ -58,9 +57,6 @@ $wynik=$polaczenie -> query($sql);
 	<meta charset="utf-8">
     </head>
     <body>
-        <form method="post">
-            <input type="submit"  value="Dodaj nowego użytkownika" formaction="PROJEKT_add.php">
-        </form>
         <br><br>    
     </body>
 </html>

@@ -63,7 +63,7 @@
   <?php
   if(empty($_SESSION["zalogowany"])==1){ 
     $_SESSION["zalogowany"] = 0;
-  include 'intrumentyMainGuest.html';
+  include 'instrumentyMainGuest.html';
   }
   else if($_SESSION["zalogowany"] == 1){
   include 'instrumentyMainUser.html';

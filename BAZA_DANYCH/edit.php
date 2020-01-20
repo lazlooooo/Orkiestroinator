@@ -1,6 +1,6 @@
 <?php
 
-include 'config.php';
+include '../config.php';
 
  $id = $_POST['id'];
  if(isset($_POST['edycja']))
@@ -10,16 +10,16 @@ $email = $_POST['email'];
 $haslo = $_POST['haslo'];
 $admin = $_POST['admin'];
 $sql = "UPDATE uzytkownicy SET imie='$imie', email='$email', haslo='$haslo', admin='$admin' WHERE id='$id'";
-$wynik = $polaczenie->query($sql);
+$wynik = $conn->query($sql);
 if($wynik==false)
     {
         echo 'cos poszło nie tak z zapytaniem';
-        $polaczenie->close();
+        $conn->close();
         exit;
     }
 else
     {
-        $polaczenie->close();
+        $conn->close();
         header('location: baza.php');
     
     }
@@ -28,11 +28,11 @@ else
 else
     {
         $sql = "SELECT * FROM uzytkownicy where id='$id'"; 
-        $wynik = $polaczenie->query($sql);
+        $wynik = $conn->query($sql);
         if($wynik==false)
         {
         echo 'cos poszło nie tak z zapytaniem';
-        $polaczenie->close();
+        $conn->close();
         exit;
         }
     while(($rekord= $wynik ->fetch_assoc())  !=null)
