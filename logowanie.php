@@ -79,7 +79,7 @@
           
    <!-- Login form -->
             <form class="login-form" action="loguj.php" method="post">
-              <input type="text" name="login" id="login_log" placeholder="Nazwa użytkowanika" required/>
+              <input type="text" name="login" id="login_log" placeholder="Adres e-mail" required/>
               <input type="password" name="haslo" id="haslo_log" placeholder="Hasło" required/>
               <button type="submit" value="post" name="zaloguj">Zaloguj</button>
               <p class="message">Jescze nie stworzyłeś konta? <a href="#">Zarejestruj się!</a></p>
